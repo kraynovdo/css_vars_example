@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style rel="stylesheet" type="text/css">
+        * {
+            outline: none;
+        }
+        .dark_theme {
+            background: #424851;
+        }
+
+        .button {
+            border-style: solid;
+            border-width: var(--buttonBorderThickness);
+            border-color: var(--buttonBgColor);
+            height: var(--buttonHeight);
+            border-radius: calc(var(--buttonHeight) / 2);
+            background-color: var(--buttonBgColor);
+            color: var(--buttonTextColor);
+            padding: 0 var(--buttonPaddingHorizontal);
+
+            --buttonBorderThickness: 1px;
+            --buttonHeight: 36px;
+            --buttonBgColor: #ff7033;
+            --buttonTextColor: #ffffff;
+            --buttonPaddingHorizontal: 12px;
+        }
+
+
+        .button_dark {
+            --buttonBgColor: #6ed4d0;
+        }
+
+        .button_dark.button_dark2 {
+            --buttonTextColor: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Default</h2>
+        <h4>Button</h4>
+        <button class="button">Кнопка</button>
+        <h4>Button with 1 custom style</h4>
+        <button style="
+            --buttonBgColor: #e44766;
+        " class="button">Кнопка</button>
+    </div>
+    <div class="dark_theme">
+        <h2>Dark</h2>
+        <button class="button button_dark">Кнопка</button>
+    </div>
+    <div class="button_dark dark2_theme">
+        <h2>Dark 2</h2>
+        <button class="button button_dark2">Кнопка</button>
+    </div>
+</body>
+</html>
